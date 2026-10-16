@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-arabic: 'Cairo', system-ui, -apple-system, sans-serif;
+  }
+
+  [dir="rtl"] {
+    font-family: var(--font-arabic);
+  }
+
+  [dir="ltr"] {
+    font-family: var(--font-sans);
+  }
+}
+
+/* Custom scrollbars and transitions */
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: #fde68a;
+  color: #292524;
+}

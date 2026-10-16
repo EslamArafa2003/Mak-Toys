@@ -1,0 +1,7 @@
+{
+  "name": "Mak Toys — Egyptian Fabric Toys",
+  "description": "Authentic Egyptian fabric toys handcrafted in Alexandria, teaching life skills and Arab culture with high quality, safe materials, and fair local pricing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
