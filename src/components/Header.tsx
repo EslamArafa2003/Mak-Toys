@@ -1,6 +1,7 @@
 import React from 'react';
 import { Language } from '../types';
 import { translations } from '../translations';
+import { BRAND_LOGO_IMAGE } from '../data/mockData';
 import { Globe, ShoppingBag, PhoneCall } from 'lucide-react';
 
 interface HeaderProps {
@@ -25,18 +26,30 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="sticky top-0 z-40 bg-[#FBF9F5]/90 backdrop-blur-md border-b border-stone-200/80 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-8">
-        {/* Zone 1: Brand Wordmark (Single element) */}
+        {/* Zone 1: Brand Wordmark with Official Logo */}
         <button
           onClick={() => setActiveTab('storefront')}
-          className="text-left rtl:text-right group cursor-pointer focus:outline-none"
+          className="flex items-center gap-3 text-left rtl:text-right group cursor-pointer focus:outline-none"
         >
-          <span className="text-xl font-bold tracking-tight text-stone-900 group-hover:text-amber-900 transition-colors whitespace-nowrap shrink-0">
-            {lang === 'ar' ? 'ألعاب ماك' : 'Mak Toys'}
-            <span className="text-stone-400 font-normal mx-2">·</span>
-            <span className="text-xs font-semibold uppercase tracking-wider text-amber-800">
-              {lang === 'ar' ? 'Mak Toys' : 'ألعاب ماك'}
+          <img
+            src={BRAND_LOGO_IMAGE}
+            alt="Mak Toys Brand Logo"
+            referrerPolicy="no-referrer"
+            className="w-10 h-10 object-contain rounded-xl border border-stone-200 shadow-xs group-hover:scale-105 transition-transform bg-white shrink-0"
+          />
+          <div className="flex flex-col">
+            <div className="flex items-center gap-2">
+              <span className="text-xl font-black tracking-tight text-stone-900 group-hover:text-amber-900 transition-colors whitespace-nowrap">
+                {lang === 'ar' ? 'ألعاب ماك' : 'Mak Toys'}
+              </span>
+              <span className="text-[11px] font-bold text-amber-800 bg-amber-100/70 border border-amber-200 px-1.5 py-0.5 rounded text-xs hidden sm:inline-block">
+                {lang === 'ar' ? 'مصر' : 'Egypt'}
+              </span>
+            </div>
+            <span className="text-[10px] font-semibold text-stone-500 tracking-wider">
+              {lang === 'ar' ? 'Handcrafted in Egypt · ألعاب قماشية تعليمية' : 'Handcrafted in Egypt · Fabric Toys'}
             </span>
-          </span>
+          </div>
         </button>
 
         {/* Zone 2: 4-5 single-line clean text nav links */}

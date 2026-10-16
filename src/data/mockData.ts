@@ -13,6 +13,7 @@ import {
   AdventurePackageInfo
 } from '../types';
 
+export const BRAND_LOGO_IMAGE = '/src/assets/images/mak_toys_brand_logo_1792159852388.jpg';
 export const HERO_IMAGE = '/src/assets/images/hero_mok_toys_collection_1792117201858.jpg';
 export const PACKAGING_IMAGE = '/src/assets/images/mok_packaging_craft_1792117204284.jpg';
 export const ACTIVITY_GUIDE_IMAGE = '/src/assets/images/activity_guide_parent_child_1792117204498.jpg';

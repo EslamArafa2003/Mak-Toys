@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Order, QuoteRequest, CustomOrder, Language } from '../types';
 import { translations } from '../translations';
-import { OFFICIAL_SUPPORT_PHONE } from '../data/mockData';
+import { OFFICIAL_SUPPORT_PHONE, BRAND_LOGO_IMAGE } from '../data/mockData';
 import {
   FileText,
   CheckCircle2,
@@ -120,14 +120,22 @@ export const PRDManagementDashboard: React.FC<PRDManagementDashboardProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         {/* Top Header & Return CTA */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-stone-200">
-          <div>
-            <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-amber-800">
-              <FileText className="w-4 h-4" />
-              <span>Mak Toys · Pitch, Strategy & Operations · Alexandria, Egypt</span>
+          <div className="flex items-center gap-4">
+            <img
+              src={BRAND_LOGO_IMAGE}
+              alt="Mak Toys Official Brand Logo"
+              referrerPolicy="no-referrer"
+              className="w-14 h-14 object-contain rounded-xl bg-white border border-stone-200 shadow-xs shrink-0"
+            />
+            <div>
+              <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-amber-800">
+                <FileText className="w-4 h-4" />
+                <span>Mak Toys · Pitch, Strategy & Operations · Alexandria, Egypt</span>
+              </div>
+              <h1 className="text-2xl sm:text-3xl font-extrabold text-stone-900 mt-1">
+                {lang === 'ar' ? 'رؤية مشروع ألعاب ماك، خطة التوسع، ولوحة العمليات' : 'Mak Toys Vision, Strategic Pitch & Operations'}
+              </h1>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-stone-900 mt-1">
-              {lang === 'ar' ? 'رؤية مشروع ألعاب ماك، خطة التوسع، ولوحة العمليات' : 'Mak Toys Vision, Strategic Pitch & Operations'}
-            </h1>
           </div>
 
           <button
